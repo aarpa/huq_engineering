@@ -4,26 +4,65 @@ html {
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background-color: black;
+  color: white;
+  font-size: 1.25rem;
+}
+
+header .home {
+  flex-grow: 1;
+}
+
+a {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+header nav a:hover {
+  background-color: gray;
+  transition: background-color 0.25s linear;
+}
+
 main {
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url("../images/birds-eye-city.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 30rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background-color: lightgray;
+}
+
+main img {
+  width: 25rem;
+  height: auto;
 }
 
 .title {
+  line-height: 1.35;
+  padding: 2rem;
+}
+
+.title h1 {
+  font-size: 2rem;
   font-weight: bold;
-  color: white;
-  text-align: center;
-  line-height: 1.5;
-  padding: 5rem 2rem;
 }
 
-h1 {
-  font-size: 2.5rem;
+.title h2 {
+  font-size: 1.25rem;
+  margin: 1rem 0;
 }
 
-h2 {
-  font-size: 1.5rem;
+.title button {
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background-color: darkgray;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  border-style: none;
+  box-shadow: 0 0 5px 0.5px #616161;
 }
