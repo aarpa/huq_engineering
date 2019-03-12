@@ -41,36 +41,44 @@
       </div>
     </main>
 
+    <div id="services">
+      <h2>Services</h2>
+      <div class="service-list">        
+        <div class="service">
+          <button class="accordion">Service 1</button>
+          <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="service">
+          <button class="accordion">Service 2</button>
+          <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="service">
+          <button class="accordion">Service 3</button>
+          <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+
     <div id="mission">
       <h2>Our Mission</h2>
       <p class="description">Huq Engineering Consultancy, PLLC is a consulting engineering firm providing services of Geotechnical Engineering, Structural Engineering, Forensic Engineering, Construction support, and Special Inspection. We also provide services of building planning, design, permitting for new buildings and alterations to existing buildings. We provide innovative solutions to our projects. Our business is founded on the principles of providing high quality service in a timely and cost effective manner.</p>
     </div>
 
-    <div id="services">
-      <h2>Services</h2>
-      <div class="service">
-        <button class="accordion">Service 1</button>
-        <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-    </div>
-
     <script>
-      let acc = document.querySelector(".accordion");
-      console.log(acc);
+      let acc = document.querySelector(".service .accordion");
+      // console.log(acc);
 
-      for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener('click', function() {
+      acc.addEventListener('click', function() {
+        let panel = this.nextElementSibling;
+        if (panel.style.display === 'block') {
           this.classList.toggle('active');
-          let panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
+          panel.style.display = 'none';
+        } else {
+          this.classList.toggle('active');
+          panel.style.display = 'block';
+        }
+      });
+
     </script>
 
     <!-- Navigation bar remains hidden until user scrolls past the landing section, at which point nav bar smoothly fades down from top -->
