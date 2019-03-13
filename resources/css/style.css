@@ -62,10 +62,10 @@ main img {
 .landing button,
 .service .accordion {
   padding: 0.75rem;
-  border-radius: 1rem;
   background-color: darkgray;
   margin-top: 1rem;
   font-size: 1.25rem;
+  border-radius: 1rem;
   border-style: none;
   box-shadow: 0 0 5px 0.5px #616161;
 }
@@ -122,7 +122,8 @@ main img {
 
 /*Styling for accordion when hovering and panel below is "open"*/
 .service .accordion:hover,
-.service .accordion.active {
+.service .accordion.active,
+.panel a:hover {
   background-color: #ccc;
 }
 
@@ -134,8 +135,17 @@ main img {
 /*Panel styling that can be toggled depending on class of accordion*/
 .panel {
   display: none;
-  width: 100%;
-  padding-left: 0.5rem;
+  padding: 1rem;
   background-color: #eee;
   overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 2px 0.2px #9e9e9e;
+}
+
+.panel a {
+  color: black;
+  display: block;
+  border-radius: 0.75rem;
+  line-height: 1.5;
+  padding: 0.8rem 0.4rem;
 }
