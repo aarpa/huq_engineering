@@ -43,17 +43,29 @@
 
     <div id="services">
       <h2>Services</h2>
-      <div class="service-list">        
+      <div class="service-list">
         <div class="service">
-          <button class="accordion">Service 1</button>
+          <button class="accordion">Planning and Permitting</button>
           <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="service">
-          <button class="accordion">Service 2</button>
+          <button class="accordion">Geotechnical Engineering</button>
           <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="service">
-          <button class="accordion">Service 3</button>
+          <button class="accordion">Structural Engineering</button>
+          <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="service">
+          <button class="accordion">Forensic Engineering</button>
+          <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="service">
+          <button class="accordion">Construction Support</button>
+          <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="service">
+          <button class="accordion">Special Inspection</button>
           <p class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
       </div>
@@ -65,19 +77,21 @@
     </div>
 
     <script>
-      let acc = document.querySelector(".service .accordion");
-      // console.log(acc);
+      let acc = document.querySelectorAll(".service .accordion");
+      console.log(acc); //Returns array of button objects; length = 3
 
-      acc.addEventListener('click', function() {
-        let panel = this.nextElementSibling;
-        if (panel.style.display === 'block') {
-          this.classList.toggle('active');
-          panel.style.display = 'none';
-        } else {
-          this.classList.toggle('active');
-          panel.style.display = 'block';
-        }
-      });
+      for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function() {
+          let panel = this.nextElementSibling;
+          if (panel.style.display === 'block') {
+            this.classList.toggle('active');
+            panel.style.display = 'none';
+          } else {
+            this.classList.toggle('active');
+            panel.style.display = 'block';
+          }
+        });
+      }
 
     </script>
 

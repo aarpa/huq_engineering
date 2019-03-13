@@ -90,12 +90,12 @@ main img {
 .service-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .service {
-  width: 25%;
+  width: 45%;
 }
 
 /*Styling for accordion when "closed"*/
@@ -108,6 +108,7 @@ main img {
   border: none;
   outline: none;
   font-size: 1.25rem;
+  width: 100%;
 }
 
 /*Unicode for "plus" sign*/
@@ -133,7 +134,7 @@ main img {
 /*Panel styling that can be toggled depending on class of accordion*/
 .panel {
   display: none;
-  /*width: 30rem;*/
+  width: 100%;
   padding-left: 0.5rem;
   background-color: #eee;
   overflow: hidden;
