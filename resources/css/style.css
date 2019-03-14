@@ -17,6 +17,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  transition: top 0.35s linear;
+  width: 100%;
   height: 5rem;
   background-color: black;
   color: white;
@@ -39,7 +43,8 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2rem;
+  /*position: relative;*/
+  padding: 7rem 2rem 2rem 2rem;
   background-color: lightgray;
 }
 
@@ -81,7 +86,8 @@ main img {
 }
 
 #mission h2,
-#services h2 {
+#services h2,
+#faq h2 {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -146,7 +152,7 @@ main img {
   border-radius: 1rem;
   box-shadow: 0 0 2px 0.2px #9e9e9e;
   max-height: 0;
-  transition: max-height 0.8s linear;
+  transition: max-height 1s linear;
 }
 
 .panel a {
