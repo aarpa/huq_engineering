@@ -1,9 +1,18 @@
+/*Universal Styles*/
 html {
   font-size: 16px;
   font-family: sans-serif;
   box-sizing: border-box;
 }
 
+header nav a:hover,
+.landing button:hover {
+  background-color: gray;
+  box-shadow: 0 0 5px 0.5px #616161;
+  transition: background-color 0.25s linear;
+}
+
+/*Header styles*/
 header {
   display: flex;
   justify-content: space-between;
@@ -19,15 +28,11 @@ header .home {
   font-size: 1.75rem;
 }
 
-a {
+header .home a,
+header nav a {
   padding: 0.5rem;
   border-radius: 1rem;
   color: white;
-}
-
-header nav a:hover {
-  background-color: gray;
-  transition: background-color 0.25s linear;
 }
 
 main {
@@ -120,16 +125,16 @@ main img {
   margin-left: 5px;
 }
 
+/*Unicode for "minus" sign*/
+.accordion.active:after {
+  content: "\2212";
+}
+
 /*Styling for accordion when hovering and panel below is "open"*/
 .service .accordion:hover,
 .service .accordion.active,
 .panel a:hover {
   background-color: #ccc;
-}
-
-/*Unicode for "minus" sign*/
-.accordion.active:after {
-  content: "\2212";
 }
 
 /*Panel styling that can be toggled depending on class of accordion*/
@@ -140,6 +145,8 @@ main img {
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 0 2px 0.2px #9e9e9e;
+  max-height: 0;
+  transition: max-height 0.8s linear;
 }
 
 .panel a {
