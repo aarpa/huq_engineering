@@ -41,12 +41,12 @@
       </div>
     </main>
 
-    <div id="mission">
+    <section id="mission">
       <h2>Our Mission</h2>
       <p class="description">Huq Engineering Consultancy, PLLC is a consulting engineering firm providing services of Geotechnical Engineering, Structural Engineering, Forensic Engineering, Construction support, and Special Inspection. We also provide services of building planning, design, permitting for new buildings and alterations to existing buildings. We provide innovative solutions to our projects. Our business is founded on the principles of providing high quality service in a timely and cost effective manner.</p>
-    </div>
+    </section>
 
-    <div id="services">
+    <section id="services">
       <h2>Services</h2>
       <div class="service-list">
         <div class="service">
@@ -111,15 +111,61 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="faq">
+    <section id="faq">
       <h2>FAQ</h2>
-    </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+
+      <div class="contact">
+        <div class="info">
+          <div class="email">
+            <h4>Email</h4>
+            <p>huqengineering@gmail.com</p>
+          </div>
+          <div class="phone">
+            <h4>Phone</h4>
+            <p>(646) 283-7675</p>
+          </div>
+          <div class="fax">
+            <h4>Fax</h4>
+            <p>(732) 335-6121</p>
+          </div>
+          <div class="address">
+            <h4>Address</h4>
+            <p>353 West 48th Street, Suite 337 <br>New York, NY 10036</p>
+            <!-- embed Google map here with pin on office location -->
+          </div>
+        </div>
+        <form class="inquiry" action="./resources/data/inquiries.xls" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="First and last name">
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="example@gmail.com">
+          </div>
+          <div>
+            <label for="name">Phone Number</label>
+            <input type="phone" id="phone-number" placeholder="(646) 555-5555">
+          </div>
+          <div>
+            <label for="msg">Message</label>
+            <textarea  rows="20" cols="50" placeholder="Your message here..."></textarea>
+          </div>
+          <div>
+            <button type="submit">Submit request</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <script>
       let previousScrollPosition = window.scrollY;
-
       window.onscroll = function() {
         let currentScrollPosition = window.scrollY;
         if (currentScrollPosition > previousScrollPosition) {

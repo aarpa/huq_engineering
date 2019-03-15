@@ -6,11 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
-header nav a:hover,
-.landing button:hover {
-  background-color: gray;
-  box-shadow: 0 0 5px 0.5px #616161;
-  transition: background-color 0.25s linear;
+main,
+#services,
+#contact {
+  background-color: lightgray;
 }
 
 /*Header styles*/
@@ -40,12 +39,19 @@ header nav a {
   color: white;
 }
 
+header nav a:hover,
+.landing button:hover {
+  background-color: gray;
+  box-shadow: 0 0 5px 0.5px #616161;
+  transition: background-color 0.25s linear;
+}
+
+/*Landing section styles*/
 main {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 7rem 2rem 2rem 2rem;
-  background-color: lightgray;
 }
 
 main img {
@@ -70,24 +76,20 @@ main img {
 }
 
 .landing button,
-.service .accordion {
+.service button {
   padding: 0.75rem;
   background-color: darkgray;
-  margin-top: 1rem;
   font-size: 1.25rem;
   border-radius: 1rem;
   border-style: none;
   box-shadow: 0 0 5px 0.5px #616161;
 }
 
-#mission,
-#services {
+section {
   padding: 2rem;
 }
 
-#mission h2,
-#services h2,
-#faq h2 {
+section h2 {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -107,10 +109,11 @@ main img {
 
 .service {
   width: 45%;
+  margin-top: 1rem;
 }
 
 /*Styling for accordion when "closed"*/
-.service .accordion {
+.service button {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -161,4 +164,35 @@ main img {
   border-radius: 0.75rem;
   line-height: 1.5;
   padding: 0.8rem 0.4rem;
+}
+
+/*Contacts styles*/
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+}
+
+.contact .info,
+.contact .inquiry {
+  width: 40%;
+}
+
+.info h4 {
+  font-weight: bold;
+  border-bottom: 0.5px solid gray;
+  padding-bottom: 0.5rem;
+}
+
+.info p {
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.inquiry input,
+.inquiry textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0 1.5rem 0;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
 }
