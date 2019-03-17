@@ -170,6 +170,21 @@ section h2 {
   padding: 0.8rem 0.4rem;
 }
 
+/*FAQ styles*/
+ol .set {
+  padding: 1rem;
+}
+
+ol .question {
+  list-style: decimal;
+  font-weight: bold;
+}
+
+ol .answer {
+  font-style: italic;
+  color: gray;
+}
+
 /*Contacts styles*/
 .contact {
   display: flex;
