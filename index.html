@@ -163,19 +163,19 @@
         <form class="inquiry" action="./resources/data/inquiries.xls" method="post">
           <div>
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="First and last name">
+            <input type="text" id="name" placeholder="First and last name" required>
           </div>
           <div>
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="example@gmail.com">
+            <input type="email" id="email" placeholder="example@example.com" required>
           </div>
           <div>
             <label for="name">Phone Number</label>
-            <input type="phone" id="phone-number" placeholder="(646) 555-5555">
+            <input type="tel" id="phone-number" placeholder="(555) 555-5555" required>
           </div>
           <div>
             <label for="msg">Message</label>
-            <textarea  rows="20" cols="50" placeholder="Your message here..."></textarea>
+            <textarea  rows="20" cols="50" placeholder="Your message here..." required></textarea>
           </div>
           <div>
             <button type="submit">Submit request</button>
@@ -196,10 +196,16 @@
         previousScrollPosition = currentScrollPosition;
       }
 
+      let inputFields = document.querySelectorAll('input, textarea');
+      // console.log(inputFields);
+      for (let i = 0; i < inputFields.length; i++) {
+        inputFields[i].addEventListener('invalid', function() {
+          inputFields[i].classList.add('error')
+        })
+      }
 
-      let acc = document.querySelectorAll(".service .accordion");
-      // console.log(acc); //Returns array of button objects; length = 3
 
+      let acc = document.querySelectorAll('.service .accordion');
       for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener('click', function() {
           let panel = this.nextElementSibling;
