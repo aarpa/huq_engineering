@@ -36,29 +36,25 @@
         <li data-target="#landingCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#landingCarousel" data-slide-to="1"></li>
         <li data-target="#landingCarousel" data-slide-to="2"></li>
+        <!-- <li data-target="#landingCarousel" data-slide-to="3"></li> -->
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./resources/images/birds-eye-city.jpg" class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="./resources/images/concrete-interior.jpg" class="d-block w-100">
+          <!-- <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
+          </div> -->
         </div>
         <div class="carousel-item">
-          <img src="..." class="d-block w-100">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
+          <img src="./resources/images/tunnel-bw.jpg" class="d-block w-100">
         </div>
+        <div class="carousel-item">
+          <img src="./resources/images/window-scaffolding.jpg" class="d-block w-100">
+        </div>
+        <!-- <div class="carousel-item">
+          <img src="./resources/images/street-corner.jpg" class="d-block w-100">
+        </div> -->
       </div>
       <a class="carousel-control-prev" href="#landingCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -70,18 +66,12 @@
       </a>
     </div>
 
-    <main class="flex-container">
-      <div>
-        <img src="./resources/images/beams.jpg">
-      </div>
-      <div class="landing">
-        <!-- <h1>Some Motto Here</h1> -->
-        <h2>Geotechnical Engineering, Structural Engineering, Planning, Specialty Inspection, Construction Management</h2>
-        <button>
-          <a href="#contact">Get started</a>
-        </button>
-      </div>
-    </main>
+    <div class="subtitle">
+      <h1>Geotechnical Engineering, Structural Engineering, Planning, Specialty Inspection, Construction Management</h1>
+      <button>
+        <a href="#contact">Get started</a>
+      </button>
+    </div>
 
     <section id="mission">
       <h2>Our Mission</h2>
@@ -233,6 +223,7 @@
     </section>
 
     <script>
+      // Header displays with page scrolling
       let previousScrollPosition = window.scrollY;
       window.onscroll = function() {
         let currentScrollPosition = window.scrollY;
@@ -244,15 +235,7 @@
         previousScrollPosition = currentScrollPosition;
       }
 
-      let inputFields = document.querySelectorAll('input, textarea');
-      // console.log(inputFields);
-      for (let i = 0; i < inputFields.length; i++) {
-        inputFields[i].addEventListener('invalid', function() {
-          inputFields[i].classList.add('error')
-        })
-      }
-
-
+      // Accordions open or close
       let acc = document.querySelectorAll('.service .accordion');
       for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener('click', function() {
@@ -267,6 +250,14 @@
             panel.style.maxHeight = panel.scrollHeight + 'px';
           }
         });
+      }
+
+      // Form validation
+      let inputFields = document.querySelectorAll('input, textarea');
+      for (let i = 0; i < inputFields.length; i++) {
+        inputFields[i].addEventListener('invalid', function() {
+          inputFields[i].classList.add('error')
+        })
       }
     </script>
 

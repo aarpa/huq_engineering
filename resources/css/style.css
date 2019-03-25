@@ -6,13 +6,19 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #F5F5F5;
+}
+
 /*Multi-section styles*/
 .flex-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
+h1,
 h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -20,13 +26,11 @@ h2 {
   margin-bottom: 1rem;
 }
 
-main,
-#services,
-#contact {
+main {
   background-color: lightgray;
 }
 
-.landing button,
+.subtitle button,
 .service button,
 .inquiry button {
   padding: 1rem;
@@ -46,18 +50,22 @@ section {
   padding: 2rem 4rem;
 }
 
+#faq,
+#gallery {
+  display: none;
+}
 
 /*Header styles*/
 header {
-  display: flex;
   position: fixed;
   top: 0;
   transition: top 0.35s linear;
   width: 100%;
-  height: 5rem;
-  background-color: black;
+  padding: 1rem;
+  background-color: #424242;
   color: white;
   font-size: 1.25rem;
+  z-index: 1;
 }
 
 /*header img {
@@ -78,42 +86,41 @@ header a {
 }
 
 header nav a:hover,
-.landing button:hover,
+.subtitle button:hover,
 .inquiry button:hover {
   background-color: gray;
   box-shadow: 0 0 5px 0.5px #616161;
   transition: background-color 0.25s linear;
 }
 
-/*Landing section styles*/
-main {
-  display: flex;
-  align-items: center;
-  padding: 7rem 5rem 2rem 5rem;
+/*subtitle section styles*/
+.carousel-inner {
+  max-height: 45rem;
 }
 
-main img {
-  width: 25rem;
-  height: auto;
+.carousel-item img {
+  height: 100%;
+  width: auto;
 }
 
-.landing {
-  line-height: 1.35;
-  padding-left: 2rem;
+.subtitle {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    /* background-color: black; */
+    color: white;
+    width: 50%;
 }
 
-.landing button {
-  width: 80%;
-  margin: 0 10%;
+.subtitle h1 {
+  font-size: 1.35rem;
+  font-weight: normal;
+  text-align: left;
 }
 
-/*.landing h1 {
-  font-size: 2rem;
-  font-weight: bold;
-}*/
-
-.landing h2 {
-  font-size: 1.25rem;
+.subtitle button {
+  width: 75%;
+  /*margin: 0 10%;*/
 }
 
 /*Mission section styles*/
@@ -123,9 +130,15 @@ main img {
 }
 
 /*Service section styles*/
+#services {
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url('../images/brick-pavement-bw.jpg');
+}
 .service-list {
-  display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
 }
 
@@ -176,10 +189,6 @@ main img {
 }
 
 /*FAQ styles*/
-#faq {
-  display: none;
-}
-
 ol .set {
   padding: 1rem;
 }
@@ -196,7 +205,6 @@ ol .answer {
 
 /*Contacts styles*/
 .contact {
-  display: flex;
   margin-top: 2rem;
 }
 
