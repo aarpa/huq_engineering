@@ -3,6 +3,7 @@
   <head>
     <title>Huq Engineering Consultancy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link rel="stylesheet" href="./resources/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -16,35 +17,31 @@
 
   <body>
     <header class="flex-container">
-      <!-- <div class="logo">
-        <img src="./resources/images/company-logo.png" alt="logo">
-      </div> -->
-      <div class="home">
-        <p>Huq Engineering Consultancy</p>
+      <!-- <img class="logo" src="./resources/images/company-logo.png" alt="logo"> -->
+      <p class="home">Huq Engineering Consultancy</p>
+      <button class="menu-button"><i class="fas fa-bars"></i></button>
+      <div class="menu-list">
+        <a class="menu-item" href="#mission">Our Mission</a>
+        <a class="menu-item" href="#services">Services</a>
+        <a class="menu-item" href="#contact">Contact Us</a>
+        <!-- <a class="menu-item" href="#faq">FAQ</a> -->
+        <!-- <a class="menu-item" href="#gallery">Gallery</a> -->
       </div>
-      <nav>
-        <a href="#mission">Our Mission</a>
-        <a href="#services">Services</a>
-        <a href="#faq">FAQ</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
     </header>
 
-    <div id="landingCarousel" class="carousel slide" data-ride="carousel">
+    <!-- <div id="landingCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#landingCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#landingCarousel" data-slide-to="1"></li>
         <li data-target="#landingCarousel" data-slide-to="2"></li>
-        <!-- <li data-target="#landingCarousel" data-slide-to="3"></li> -->
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="./resources/images/concrete-interior.jpg" class="d-block w-100">
-          <!-- <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div> -->
+          </div>
         </div>
         <div class="carousel-item">
           <img src="./resources/images/tunnel-bw.jpg" class="d-block w-100">
@@ -52,9 +49,6 @@
         <div class="carousel-item">
           <img src="./resources/images/window-scaffolding.jpg" class="d-block w-100">
         </div>
-        <!-- <div class="carousel-item">
-          <img src="./resources/images/street-corner.jpg" class="d-block w-100">
-        </div> -->
       </div>
       <a class="carousel-control-prev" href="#landingCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,7 +65,7 @@
       <button>
         <a href="#contact">Get started</a>
       </button>
-    </div>
+    </div> -->
 
     <section id="mission">
       <h2>Our Mission</h2>
@@ -235,8 +229,14 @@
         previousScrollPosition = currentScrollPosition;
       }
 
+      // Mobile menu button opens or closes
+      // let menuButton = document.querySelector('.mobile-menu button');
+      // menuButton.addEventListener('click', function() {
+      //   let menu = document.querySelector('mobile-menu');
+      // });
+
       // Accordions open or close
-      let acc = document.querySelectorAll('.service .accordion');
+      let acc = document.querySelectorAll('.service button');
       for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener('click', function() {
           let panel = this.nextElementSibling;

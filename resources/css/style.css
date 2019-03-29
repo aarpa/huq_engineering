@@ -57,10 +57,9 @@ section {
 
 /*Header styles*/
 header {
-  position: fixed;
+  position: relative;
   top: 0;
-  transition: top 0.35s linear;
-  width: 100%;
+  transition: top 0.45s linear;
   padding: 1rem;
   background-color: #424242;
   color: white;
@@ -68,29 +67,47 @@ header {
   z-index: 1;
 }
 
-/*header img {
-  height: 5rem;
-  width: auto;
-}*/
-
 header .home {
+  display: block;
   flex-grow: 1;
   font-size: 1.75rem;
 }
 
-header a {
+header .menu-button {
+  display: none;
+  border: none;
+  font-size: 1.75rem;
+  color: white;
+  background-color: #424242;
+}
+
+header .menu-item {
   padding: 0.5rem;
   border-radius: 1rem;
   color: white;
   cursor: pointer;
 }
 
-header nav a:hover,
+header .menu-item:hover,
 .subtitle button:hover,
 .inquiry button:hover {
   background-color: gray;
   box-shadow: 0 0 5px 0.5px #616161;
   transition: background-color 0.25s linear;
+}
+
+@media only screen and (max-width: 930px) {
+  header .menu-button {
+    display: block;
+  }
+
+  header .menu-list {
+    /*display: none;*/
+  }
+
+  header .menu-item {
+    display: block;
+  }
 }
 
 /*subtitle section styles*/
@@ -153,11 +170,10 @@ header nav a:hover,
   color: #777;
   font-weight: bold;
   float: right;
-  margin-left: 5px;
 }
 
-/*Unicode for "minus" sign*/
-.accordion.active:after {
+/*Unicode for "minus" sign on "open" button*/
+.service .accordion.active:after {
   content: "\2212";
 }
 
@@ -255,8 +271,4 @@ ol .answer {
 
 .inquiry button:active {
   background-color: #dcedc8;
-}
-
-@media only screen and (max-width: 768px) {
-
 }
