@@ -149,16 +149,18 @@ header .menu-item:hover,
 /*About-Us section styles*/
 .credentials {
   line-height: 1.5;
-  padding: 0 1rem;
+  text-align: center;
+  /*padding: 0 10rem;*/
 }
 
-.credentials-list {
-  list-style: decimal;
-  padding: 0 2rem;
+.credentials p {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .credentials-list li {
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
+  font-style: italic;
 }
 
 /*Service section styles*/

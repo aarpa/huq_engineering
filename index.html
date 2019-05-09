@@ -1,3 +1,18 @@
+<?php
+  if($_POST["submit"]) {
+      $recipient="aarpa128@gmail.com";
+      $subject="New Client Inquiry!";
+      $sender=$_POST["sender"];
+      $senderEmail=$_POST["senderEmail"];
+      $message=$_POST["message"];
+
+      $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+      mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+      <!-- $thankYou="<p>Thank you! Your message has been sent.</p>"; -->
+  }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -69,20 +84,18 @@
 
     <section id="mission">
       <h2>Our Mission</h2>
-      <p class="description">Huq Engineering Consultancy, PLLC is a consulting engineering firm providing services of Geotechnical Engineering, Structural Engineering, Forensic Engineering, Construction support, and Special Inspection. We also provide services of building planning, design, permitting for new buildings and alterations to existing buildings. We provide innovative solutions to our projects. Our business is founded on the principles of providing high quality service in a timely and cost effective manner.</p>
+      <p class="description">Huq Engineering Consultancy, PLLC is a consulting engineering firm providing services of Geotechnical Engineering, Structural Engineering, Forensic Engineering, Construction Support, and Special Inspection. We also provide services of building planning, design, permits for new buildings and alterations to existing buildings. We provide innovative solutions to our projects. Our business is founded on the principles of providing high quality service in a timely and cost effective manner.</p>
     </section>
 
     <section id="about-us">
       <h2>About Us</h2>
-      <div class="credentials">
+      <div class="credentials flex-container">
         <p>Huq Engineering Consultancy is a qualified consulting firm with the following certifications:</p>
         <ol class="credentials-list">
           <li>Professional Engineer in the State of New York, registered by the NYC Department of Buildings</li>
           <li>Professional Engineer in the State of Maryland and Texas</li>
           <li>Special Inspection Agency, certified by the NYC Department of Buildings</li>
-          <li>Minority Business Enterprise certified by the State of New York</li>
-          <li>Minority Business Enterprise certified by New York City</li>
-          <li>Minority Business Enterprise certified by the Port Authority of New York and New Jersey</li>
+          <li>Minority Business Enterprise, certified by New York City, the State of New York, and Port Authoriy of New York &amp; New Jersey</li>
         </ol>
       </div>
     </section>
@@ -207,26 +220,32 @@
             </div>
           </div>
         </div>
-        <form class="inquiry" action="./resources/data/inquiries.xls" method="post">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="First and last name" required>
+
+        <!-- <?=$thankYou ?> -->
+
+        <form class="inquiry" action="./resources/data/inquiries.php" method="post">
+          <div class="name">
+            <label>Name</label>
+            <input type="text" name="sender" placeholder="First and last name" required>
+          </div>
+          <div class="email">
+            <label>Email Address</label>
+            <input type="email" name="senderEmail" placeholder="example@example.com" required>
+          </div>
+          <div class="phone-number">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(555) 555-5555" required>
           </div>
           <div>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="example@example.com" required>
+            <label>Message</label>
+            <textarea name="message"  rows="20" cols="50" placeholder="Your message here..." required></textarea>
           </div>
           <div>
-            <label for="name">Phone Number</label>
-            <input type="tel" id="phone-number" placeholder="(555) 555-5555" required>
+            <input type="submit" name="submit">
           </div>
-          <div>
-            <label for="msg">Message</label>
-            <textarea  rows="20" cols="50" placeholder="Your message here..." required></textarea>
-          </div>
-          <div>
+          <!-- <div>
             <button type="submit">Submit request</button>
-          </div>
+          </div> -->
         </form>
       </div>
     </section>
@@ -268,12 +287,12 @@
       }
 
       // Form validation
-      let inputFields = document.querySelectorAll('input, textarea');
-      for (let i = 0; i < inputFields.length; i++) {
-        inputFields[i].addEventListener('invalid', function() {
-          inputFields[i].classList.add('error')
-        })
-      }
+      // let inputFields = document.querySelectorAll('input, textarea');
+      // for (let i = 0; i < inputFields.length; i++) {
+      //   inputFields[i].addEventListener('invalid', function() {
+      //     inputFields[i].classList.add('error')
+      //   })
+      // }
     </script>
 
     <!-- Navigation bar remains hidden until user scrolls past the landing section, at which point nav bar smoothly fades down from top -->
