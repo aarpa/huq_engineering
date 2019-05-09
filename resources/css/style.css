@@ -26,10 +26,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-main {
-  background-color: lightgray;
-}
-
 .subtitle button,
 .service button,
 .inquiry button {
@@ -147,20 +143,30 @@ header .menu-item:hover,
 }
 
 /*About-Us section styles*/
+#about-us {
+  background-color: white;
+}
+
 .credentials {
   line-height: 1.5;
   text-align: center;
-  /*padding: 0 10rem;*/
 }
 
-.credentials p {
-  font-weight: bold;
+.credentials h4 {
   font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.credentials-list {
+  padding: 0 5rem;
+  font-style: italic;
 }
 
 .credentials-list li {
-  padding: 1rem 0;
-  font-style: italic;
+  padding: 0.5rem 0;
+  border-top: 0.5px solid lightgray;
 }
 
 /*Service section styles*/
@@ -223,7 +229,7 @@ header .menu-item:hover,
 }
 
 /*FAQ styles*/
-ol .set {
+/*ol .set {
   padding: 1rem;
 }
 
@@ -235,7 +241,7 @@ ol .question {
 ol .answer {
   font-style: italic;
   color: gray;
-}
+}*/
 
 /*Contacts styles*/
 .contact {
